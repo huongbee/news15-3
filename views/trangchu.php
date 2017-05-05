@@ -1,66 +1,4 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Trendy Blog a Blogging Category Bootstrap Responsive Website Template  | Home :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Trendy Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
-<!-- Custom Theme files -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-</head>
-
-<body>
-	<!-- menu -->
-	<nav class="navbar navbar-default">
-						<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-			<div class="logo">
-				<a class="navbar-brand" href="index.html"><span>T</span> Trendy Blog</a>
-			</div>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav cl-effect-18" id="cl-effect-18">
-				<li class="act"><a href="index.html" class="effect1 active">Home</a></li>
-				<li><a href="events.html">Reviews</a></li>
-				<li><a href="breaking.html">Culture</a></li>
-				<li><a href="entertainment.html">Entertainment</a></li>
-				<li role="presentation" class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					  Business <span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-					  <li><a href="short-codes.html">Short-Codes</a></li>
-					  <li><a href="icons.html">Icons</a></li>
-					 
-					</ul>
-				</li>
-				<li><a href="contact.html">Contact Us</a></li>
-			</ul>
-		</div>
-	</nav>
-	<!-- //menu -->
-	
-	<!-- banner -->
+<!-- banner -->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
@@ -73,7 +11,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item active">
-	      <img src="images/banner.jpg" alt="Chania">
+	      <img src="public/images/banner.jpg" alt="Chania">
 	      <div class="carousel-caption">
 	        <h3>Chania</h3>
 	        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -81,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    </div>
 
 	    <div class="item">
-	      <img src="images/banner.jpg" alt="Chania">
+	      <img src="public/images/banner.jpg" alt="Chania">
 	      <div class="carousel-caption">
 	        <h3>Chania</h3>
 	        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -89,7 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    </div>
 
 	    <div class="item">
-	      <img src="images/banner.jpg" alt="Flower">
+	      <img src="public/images/banner.jpg" alt="Flower">
 	      <div class="carousel-caption">
 	        <h3>Flowers</h3>
 	        <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -97,7 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    </div>
 
 	    <div class="item">
-	      <img src="images/banner.jpg" alt="Flower">
+	      <img src="public/images/banner.jpg" alt="Flower">
 	      <div class="carousel-caption">
 	        <h3>Flowers</h3>
 	        <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -129,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
-				<script type="text/javascript" src="js/jquery.marquee.js"></script>
+				<script type="text/javascript" src="public/js/jquery.marquee.js"></script>
 				<script>
 				  $('.marquee').marquee({ pauseOnHover: true });
 				  //@ sourceURL=pen.js
@@ -139,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="video-grids">
 					<div class="col-md-8 video-grids-left">
 						<div class="video-grids-left1">
-							<img src="images/9.jpg" alt=" " class="img-responsive" />
+							<img src="public/images/9.jpg" alt=" " class="img-responsive" />
 							
 							<div class="video-grid-pos">
 								<h3><span>Bellevue</span>  Towers in Dubai Downtown UAE</h3>
@@ -156,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul id="flexiselDemo1">	
 									<li>
 										<div class="item">
-											<img src="images/10.jpg" alt=" " class="img-responsive" />
+											<img src="public/images/10.jpg" alt=" " class="img-responsive" />
 											
 											<div class="floods-text">
 												<h3>The fed and inequality <span>Blogger <label>|</label> <i>Adom Smith</i></span></h3>
@@ -166,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</li>
 									<li>
 										<div class="item">
-											<img src="images/11.jpg" alt=" " class="img-responsive" />
+											<img src="public/images/11.jpg" alt=" " class="img-responsive" />
 											
 											<div class="floods-text">
 												<h3>The fastest insect in the world <span>Blogger <label>|</label> <i>Adom Smith</i></span></h3>
@@ -176,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</li>
 									<li>
 										<div class="item">
-											<img src="images/12.jpg" alt=" " class="img-responsive" />
+											<img src="public/images/12.jpg" alt=" " class="img-responsive" />
 											
 											<div class="floods-text">
 												<h3>Billionaires versus Millionaires<span>Blogger <label>|</label> <i>Adom Smith</i></span></h3>
@@ -214,7 +152,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 							 });
 							  </script>
-							 <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+							 <script type="text/javascript" src="public/js/jquery.flexisel.js"></script>
 						</div>
 					</div>
 
@@ -229,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 										<div class="facts">
 											<div class="tab_list">
-												<img src="images/10.jpg" alt=" " class="img-responsive" />
+												<img src="public/images/10.jpg" alt=" " class="img-responsive" />
 											</div>
 											<div class="tab_list1">
 												<ul>
@@ -242,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="facts">
 											<div class="tab_list">
-												<img src="images/11.jpg" alt=" " class="img-responsive" />
+												<img src="public/images/11.jpg" alt=" " class="img-responsive" />
 											</div>
 											<div class="tab_list1">
 												<ul>
@@ -255,7 +193,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="facts">
 											<div class="tab_list">
-												<img src="images/12.jpg" alt=" " class="img-responsive" />
+												<img src="public/images/12.jpg" alt=" " class="img-responsive" />
 											</div>
 											<div class="tab_list1">
 												<ul>
@@ -268,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="facts">
 											<div class="tab_list">
-												<img src="images/10.jpg" alt=" " class="img-responsive" />
+												<img src="public/images/10.jpg" alt=" " class="img-responsive" />
 											</div>
 											<div class="tab_list1">
 												<ul>
@@ -281,7 +219,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="facts">
 											<div class="tab_list">
-												<img src="images/12.jpg" alt=" " class="img-responsive" />
+												<img src="public/images/12.jpg" alt=" " class="img-responsive" />
 											</div>
 											<div class="tab_list1">
 												<ul>
@@ -294,7 +232,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 									</div>
 								</div>
-								<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+								<script src="public/js/easyResponsiveTabs.js" type="text/javascript"></script>
 								<script type="text/javascript">
 									$(document).ready(function () {
 										$('#horizontalTab').easyResponsiveTabs({
@@ -316,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before">
-									<img src="images/13.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/13.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
 									</div>
@@ -335,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before1">
-									<img src="images/14.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/14.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet, consectetur.</p>
 									</div>
@@ -354,7 +292,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before2">
-									<img src="images/15.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/15.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet adipiscing. </p>
 									</div>
@@ -373,7 +311,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before3">
-									<img src="images/16.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/16.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet adipiscing. </p>
 									</div>
@@ -395,7 +333,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before4">
-									<img src="images/10.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/10.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet adipiscing. </p>
 									</div>
@@ -414,7 +352,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before5">
-									<img src="images/11.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/11.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 									<p>Lorem ipsum dolor sit amet adipiscing. </p>
 									</div>
@@ -433,7 +371,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before6">
-									<img src="images/12.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/12.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet adipiscing. </p>
 									</div>
@@ -452,7 +390,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-3 video-bottom-grid">
 							<div class="video-bottom-grid1">
 								<div class="video-bottom-grid1-before before7">
-									<img src="images/17.jpg" alt=" " class="img-responsive" />
+									<img src="public/images/17.jpg" alt=" " class="img-responsive" />
 									<div class="video-bottom-grid1-pos">
 										<p>Lorem ipsum dolor sit amet adipiscing. </p>
 									</div>
@@ -476,28 +414,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //banner-bottom -->
-<!-- footer -->
-	
-	<div class="footer">
-		<div class="container">
-			<div class="footer-bottom">
-				<div class="footer-bottom-left-whtree-agileinfo">
-					<p>&copy 2017 Trendy Blog. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts.</a></p>
-				</div>
-				<div class="footer-bottom-right-whtree-agileinfo">
-					<ul>
-						<li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
-						<li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
-						<li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //footer -->
-<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-</body>
-</html>
