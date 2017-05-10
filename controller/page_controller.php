@@ -8,8 +8,8 @@ class PageController extends Controller{
 	public function __construct(){
 		$model = new PageModel;
 		$theloai = $model->getTheloai();
+		//print_r($theloai); die;
 		return $this->getMenu($theloai);
-		//print_r($);
 
 	}
 
