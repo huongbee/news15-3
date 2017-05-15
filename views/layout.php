@@ -24,10 +24,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!-- menu -->
 	
-
+	<?php
+	include('views/menu.php');
+	?>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		
-		
 	
 	<!-- //menu -->
 	

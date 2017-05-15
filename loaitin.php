@@ -1,7 +1,7 @@
 <?php
-include('controller/page_controller.php');
+include('controller/loaitin_controller.php');
 
-$page = new PageController;
+$page = new LoaitinController;
 $page->getType();
 
 

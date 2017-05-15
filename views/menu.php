@@ -17,7 +17,8 @@
 			<li class="act"><a href="index.php" class="effect1 active">Trang chủ</a></li>
 
 			<?php
-			foreach($array as $theloai){
+			$_Theloai = $data['theloai'];
+			foreach($_Theloai as $theloai){
 			?>
 			
 			<li role="presentation" class="dropdown">
@@ -29,10 +30,11 @@
 					$loaitin = $theloai->TenLoaitin;
 					$arrLoaitin = explode(',', $loaitin);
 					foreach($arrLoaitin as $value){
-
+						list($ten, $id,$alias) = explode(":", $value);
+						//[$ten, $id,$alia] = explode(":", $value);
 					
 				?>
-				  	<li><a href="short-codes.html">Short-Codes</a></li>
+				  	<li><a href="loaitin.php?id=<?=$id?>"><?php echo $ten;?></a></li>
 				<?php
 				}
 				?>

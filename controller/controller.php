@@ -10,9 +10,10 @@ class Controller{
 		include "views/layout.php";
 	}
 
-	public function getMenu($array=array()){
-		include "views/menu.php";
-	}
+
+	// public function getMenu($array=array()){
+	// 	include "views/menu.php";
+	// }
 
 
 }

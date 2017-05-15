@@ -7,7 +7,7 @@ class database{
     public function database() {
         
 		try{
-			$this->_dbh = new PDO('mysql:host=localhost; dbname=tintuc','root','');
+			$this->_dbh = new PDO('mysql:host=localhost; dbname=tin_tuc','root','');
 			$this->_dbh->query('set names "utf8"');
 		}
 		catch(PDOException $ex){
