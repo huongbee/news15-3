@@ -93,6 +93,7 @@ $the_loai = $data['theloai'];
 								foreach($tinmoi as $tin){
 								?>
 									<li>
+										<a href="chitiet.php?id=<?=$tin->id?>">
 										<div class="item">
 											<img style="height:150px" src="public/images/tintuc/<?=$tin->Hinh?>" alt=" " class="img-responsive"/>
 											
@@ -101,6 +102,7 @@ $the_loai = $data['theloai'];
 												
 											</div>
 										</div>
+										</a>
 									</li>
 								<?php
 								}
@@ -251,9 +253,9 @@ $the_loai = $data['theloai'];
 								$arrLoaitin = explode(',', $loaitin);
 								foreach($arrLoaitin as $loai){
 
-								
+								list($ten,$id,$alias) = explode(':', $loai);
 								?>
-									<li><a href="loaitin.php"><?=$loai?></a></li>
+									<li><a href="loaitin.php?id=<?=$id?>"><?=$ten?></a></li>
 								<?php
 
 								}

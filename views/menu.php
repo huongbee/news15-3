@@ -9,7 +9,7 @@
 		<span class="icon-bar"></span>
 	  </button>
 		<div class="logo">
-			<a class="navbar-brand" href="index.html"><span>T</span> Trendy Blog</a>
+			<a class="navbar-brand" href="index.php"><span>T</span> Trendy Blog</a>
 		</div>
 	</div>
 	<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">

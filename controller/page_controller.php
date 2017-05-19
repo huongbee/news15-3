@@ -39,8 +39,22 @@ class PageController extends Controller{
 
 	public function getDetail(){
 
+		$id_tintuc = (int)$_GET['id'];
+		//$id_tintuc = settype($id_tintuc, 'int');
+
+		$model = new PageModel;
+		$chitiettin = $model->getChitietTin($id_tintuc);
+		$comment = $model->getComment($id_tintuc);
+
+
 		$theloai = $this->getMenu();
-		$arrData = array('theloai'=>$theloai);
+
+		$arrData = array(
+					'theloai'=>$theloai,
+					'chitiettin'=>$chitiettin,
+					'comment'=>$comment
+				);
+
 		return $this->loadView('single',$arrData);
 	}
 

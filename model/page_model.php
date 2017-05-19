@@ -37,6 +37,25 @@ class PageModel extends database{
 		return $this->loadAllRows();
 	}
 
+	public function getChitietTin($id_tin){
+		$sql = "SELECT * FROM tintuc WHERE id=$id_tin";
+		$this->setQuery($sql);
+		return $this->loadRow(array($id_tin));
+	}
+
+
+	public function getComment($id_tin){
+		$sql = "SELECT m.*, u.name,u.avatar FROM comment m INNER JOIN users u ON m.idUser = u.id WHERE idTinTuc = $id_tin";
+		$this->setQuery($sql);
+		return $this->loadAllRows(array($id_tin));
+	}
+
+
+
+
+
+
+
 
 
 	
