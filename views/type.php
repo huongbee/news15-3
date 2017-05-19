@@ -1,3 +1,6 @@
+<?php
+$tenloaitin = $data['tenloaitin'];
+?>
 <!-- //menu -->
 	<div class="banner-bottom">
 		<div class="container">
@@ -5,22 +8,24 @@
 				<div class="news">
 					<div class="news-grids">
 						<div class="col-md-8 news-grid-left">
-							<h3>News</h3>
+							<h3><?=$tenloaitin->TenTheLoai?> > <?=$tenloaitin->Ten?></h3>
 							<ul>
 							<?php
 							$tintheoloai = $data['tintheoloai'];
+							$phantrang = $data['hienthiphantrang'];
+
 							foreach($tintheoloai as $tin){
 
 
 							?>
 								<li>
 									<div class="news-grid-left1">
-										<img src="public/images/16.jpg" alt=" " class="img-responsive" />
+										<img src="public/images/tintuc/<?=$tin->Hinh?>" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
-										<h4><a href="single.html">Mexico's oil giant is in uncharted waters</a></h4>
-										<h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i>30.03.2016</i></h5>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<h4><a href="single.html"><?=$tin->TieuDe?></a></h4>
+										<h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i><?=date("d-m-Y",strtotime($tin->created_at))?></i></h5>
+										<p><?=$tin->TomTat?></p>
 									</div>
 									<div class="clearfix"> </div>
 								</li>
@@ -29,6 +34,7 @@
 							?>
 
 							</ul>
+							<div><?=$phantrang?></div>
 						</div>
 						<div class="col-md-4 upcoming-events-right">
 							<h3>upcoming events</h3>
