@@ -44,8 +44,31 @@
 			<?php
 			}
 			?>
-			
 			<li><a href="contact.php">Liên hệ</a></li>
+			<?php
+
+			if(isset($_SESSION['username'])){
+			?>
+				<li role="presentation" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Chào bạn <?=$_SESSION['username']?>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="logout.php">Đăng xuất</a></li>
+					</ul>
+				</li>
+			<?php
+			}
+			else{
+
+			?>
+			<li><a href="signup.php">Đăng kí</a></li>
+			<li><a href="login.php">Đăng nhập</a></li>
+			<?php
+			}
+
+			?>
+			
 		</ul>
 	</div>
 </nav>

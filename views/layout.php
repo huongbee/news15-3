@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -24,6 +28,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!-- menu -->
 	
+	    <?php
+
+	    if(isset($_COOKIE['thanhcong'])){
+	    ?>
+	    <div class="fixed-top alert alert-success" style="z-index: 2000; position: fixed;right:10px;bottom: 10px;">
+	    	<?=$_COOKIE['thanhcong']?>
+	  		<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	  	</div>
+	    <?php
+	    }
+	    ?>
+	  
 	<?php
 	include('views/menu.php');
 	?>

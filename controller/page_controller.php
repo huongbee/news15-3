@@ -58,26 +58,27 @@ class PageController extends Controller{
 		return $this->loadView('single',$arrData);
 	}
 
-	public function getLogin(){
-
-		$theloai = $this->getMenu();
-		$arrData = array('theloai'=>$theloai);
-		return $this->loadView('login',$arrData);
-	}
-
-
-	public function getSignup(){
-
-		$theloai = $this->getMenu();
-		$arrData = array('theloai'=>$theloai);
-		return $this->loadView('signup',$arrData);
-	}
-
 
 	public function getContact(){
 		$theloai = $this->getMenu();
 		$arrData = array('theloai'=>$theloai);
 		return $this->loadView('contact',$arrData);
+	}
+
+
+
+	public function insert_Comment(){
+		$noidung = $_GET['noidungbinhluan'];
+		$id_tintuc = $_GET['id_tintuc'];
+		$id_user = $_GET['id_nguoidung'];
+		$model = new PageModel();
+		$comment = $model->insertComment($id_user,$id_tintuc,$noidung);
+		if($comment>0){
+			return 'thành công';
+		}
+		else{
+			return 'thất bại';
+		}
 	}
 
 

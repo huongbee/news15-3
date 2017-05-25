@@ -69,12 +69,11 @@ $thang = getMonth($thang);
 					</div>	
 					<div class="coment-form">
 						<h4>Leave your comment</h4>
-						<form>
-							<input type="text" value="Name " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-							<input type="email" value="Email (will not be published)*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email (will not be published)*';}" required="">
-							<input type="text" value="Website" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Website';}" required="">
-							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">Your Comment...</textarea>
-							<input type="submit" value="Submit Comment" >
+						<form >
+							<input type="hidden" id="id_user" value="<?=isset($_SESSION['id_user'])?$_SESSION['id_user']:''?>">
+							<input type="hidden" id="id_tin" value="<?=$_GET['id']?>">
+							<textarea id="noidung" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">Your Comment...</textarea>
+							<input type="button" value="Submit Comment" id="guibinhluan" >
 						</form>
 					</div>
 				</div>
@@ -132,3 +131,28 @@ $thang = getMonth($thang);
 		</div>
 	</div>
 </div>
+<script>
+$(document).ready(function(){
+	$('#guibinhluan').click(function(){
+		var noidung = $('#noidung').val();
+		var id_user = $('#id_user').val();
+		var id_tin = $('#id_tin').val();
+		$.ajax({
+			url:'http://localhost/news/comment.php',
+			data:{
+				noidungbinhluan:noidung,
+				id_nguoidung:id_user,
+				id_tintuc:id_tin
+			},
+			type:'GET',
+			success:function(){
+				console.log("thành công")
+			},
+			error:function(){
+				console.log('lỗi');
+			}
+		})
+	})
+	
+})
+</script>

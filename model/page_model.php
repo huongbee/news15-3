@@ -45,9 +45,23 @@ class PageModel extends database{
 
 
 	public function getComment($id_tin){
-		$sql = "SELECT m.*, u.name,u.avatar FROM comment m INNER JOIN users u ON m.idUser = u.id WHERE idTinTuc = $id_tin";
+		$sql = "SELECT m.*, u.name, u.avatar FROM comment m INNER JOIN users u ON m.idUser = u.id WHERE idTinTuc = $id_tin";
 		$this->setQuery($sql);
 		return $this->loadAllRows(array($id_tin));
+	}
+
+
+
+	public function insertComment($idUser,$idTinTuc,$NoiDung){
+		$sql = "INSERT INTO comment(idUser,idTinTuc,NoiDung) VALUES (?,?,?)";
+		$this->setQuery($sql);
+		$comment = $this->execute(array($idUser,$idTinTuc,$NoiDung));
+		if($comment){
+			return $this->getLastId();
+		}
+		else{
+			return false;
+		}
 	}
 
 

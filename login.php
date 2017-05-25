@@ -1,7 +1,7 @@
 <?php
-include('controller/page_controller.php');
+include('controller/user_controller.php');
 
-$page = new PageController();
+$page = new UserController();
 $page->getLogin();
 
 

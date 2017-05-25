@@ -1,8 +1,8 @@
 <?php
-include('controller/page_controller.php');
+include('controller/user_controller.php');
 
-$page = new PageController();
-$page->getSignup();
+$user = new UserController();
+$user->getSignup();
 
 
 ?>
