@@ -58,6 +58,7 @@ class UserController extends Controller{
 			//print_r($user); die;
 			$_SESSION['username'] = $user->name;
 			$_SESSION['id_user'] = $user->id;
+			$_SESSION['avatar'] = $user->avatar;
   			header('Location:index.php');
 			setcookie('thanhcong','Đăng nhập thành công', time()+5);
 			unset($_SESSION['error']);

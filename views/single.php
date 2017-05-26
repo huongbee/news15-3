@@ -51,7 +51,7 @@ $thang = getMonth($thang);
 						<div class="media response-info">
 							<div class="media-left response-text-left">
 								<a href="#">
-									<img class="media-object" src="<?=$binhluan->avatar?>" alt="" style="width: 70px"/>
+									<img class="media-object" src="<?php if($binhluan->avatar==NULL) echo 'public/images/default_user.png'; else echo $binhluan->avatar;?>" alt="" style="width: 70px"/>
 								</a>
 								<h5><a href="#"><?=$binhluan->name?></a></h5>
 							</div>
@@ -61,16 +61,18 @@ $thang = getMonth($thang);
 									<li><?=date('d-m-Y H:i',strtotime($binhluan->created_at))?></li>
 								</ul>		
 							</div>
+
 							<div class="clearfix"> </div>
 						</div>
 						<?php
 						}
 						?>
+						<div id="append_data"></div>
 					</div>	
 					<div class="coment-form">
 						<h4>Leave your comment</h4>
 						<form >
-							<input type="hidden" id="id_user" value="<?=isset($_SESSION['id_user'])?$_SESSION['id_user']:''?>">
+							<input type="hidden" id="id_user" value="<?=isset($_SESSION['id_user'])?$_SESSION['id_user']:''?>" nameUser="<?=isset($_SESSION['username'])?$_SESSION['username']:''?>" avatarUser="<?=isset($_SESSION['avatar'])?$_SESSION['avatar']:''?>">
 							<input type="hidden" id="id_tin" value="<?=$_GET['id']?>">
 							<textarea id="noidung" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">Your Comment...</textarea>
 							<input type="button" value="Submit Comment" id="guibinhluan" >
@@ -136,7 +138,14 @@ $(document).ready(function(){
 	$('#guibinhluan').click(function(){
 		var noidung = $('#noidung').val();
 		var id_user = $('#id_user').val();
+		var nameUser = $('#id_user').attr('nameUser');
+		var avatarUser = $('#id_user').attr('avatarUser');
+		//alert(avatarUser)
 		var id_tin = $('#id_tin').val();
+		if(avatarUser==''){
+			avatarUser = 'public/images/default_user.png';
+		}
+		var dataAppend = '<div class="media response-info"><div class="media-left response-text-left"><a href="#"><img class="media-object" src="'+avatarUser+'" alt="" style="width: 70px"/></a><h5><a href="#">'+nameUser+'</a></h5></div><div class="media-body response-text-right"><p>'+noidung+'</p><ul><li>Vừa xong</li></ul></div></div>'
 		$.ajax({
 			url:'http://localhost/news/comment.php',
 			data:{
@@ -144,8 +153,9 @@ $(document).ready(function(){
 				id_nguoidung:id_user,
 				id_tintuc:id_tin
 			},
-			type:'GET',
+			type:'POST',
 			success:function(){
+				$('#append_data').append(dataAppend)
 				console.log("thành công")
 			},
 			error:function(){

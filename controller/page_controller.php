@@ -68,9 +68,9 @@ class PageController extends Controller{
 
 
 	public function insert_Comment(){
-		$noidung = $_GET['noidungbinhluan'];
-		$id_tintuc = $_GET['id_tintuc'];
-		$id_user = $_GET['id_nguoidung'];
+		$noidung = $_POST['noidungbinhluan'];
+		$id_tintuc = $_POST['id_tintuc'];
+		$id_user = $_POST['id_nguoidung'];
 		$model = new PageModel();
 		$comment = $model->insertComment($id_user,$id_tintuc,$noidung);
 		if($comment>0){

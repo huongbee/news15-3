@@ -23,7 +23,7 @@ $tenloaitin = $data['tenloaitin'];
 										<img src="public/images/tintuc/<?=$tin->Hinh?>" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
-										<h4><a href="single.html"><?=$tin->TieuDe?></a></h4>
+										<h4><a href="chitiet.php?id=<?=$tin->id?>"><?=$tin->TieuDe?></a></h4>
 										<h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i><?=date("d-m-Y",strtotime($tin->created_at))?></i></h5>
 										<p><?=$tin->TomTat?></p>
 									</div>
