@@ -7,7 +7,9 @@ class Controller{
 	}
 
 	public function loadView($view,$data=array()){
+
 		include "views/layout.php";
+
 	}
 
 
@@ -15,7 +17,11 @@ class Controller{
 	// 	include "views/menu.php";
 	// }
 
+	public function loadViewSearch($data){
+		include('views/dataSearch.php');
+	}
 
 }
+
 
 ?>

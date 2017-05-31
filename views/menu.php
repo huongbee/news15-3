@@ -9,7 +9,9 @@
 		<span class="icon-bar"></span>
 	  </button>
 		<div class="logo">
-			<a class="navbar-brand" href="index.php"><span>T</span> Trendy Blog</a>
+
+			<input style="margin: 20px 20px 30px; float: left;" class="form-control txtSearch" type="text" value="" placeholder="Nhập từ khóa">
+			<input style="float: left;top: 20px;position: absolute;" type="submit" class="btnSearch" value="Search">
 		</div>
 	</div>
 	<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
@@ -34,7 +36,7 @@
 						//[$ten, $id,$alia] = explode(":", $value);
 					
 				?>
-				  	<li><a href="loaitin.php?id=<?=$id?>"><?php echo $ten;?></a></li>
+				  	<li><a href="<?=$id?>-<?=$alias?>"><?php echo $ten;?></a></li>
 				<?php
 				}
 				?>
@@ -62,7 +64,7 @@
 			else{
 
 			?>
-			<li><a href="signup.php">Đăng kí</a></li>
+			<li><a href="dang-ki">Đăng kí</a></li>
 			<li><a href="login.php">Đăng nhập</a></li>
 			<?php
 			}

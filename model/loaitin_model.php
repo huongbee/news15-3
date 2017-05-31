@@ -26,6 +26,9 @@ class LoaiTinModel extends database{
 	}
 
 
+//voh6GGvYIxfXdm6RZy5JvzUROYF0PN8jL8P3MXL8
+//voh6GGvYIxfXdm6RZy5JvzUROYF0PN8jL8P3MXL8
+
 
 
 

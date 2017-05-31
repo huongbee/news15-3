@@ -12,6 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Trendy Blog a Blogging Category Bootstrap Responsive Website Template  | Home :: w3layouts</title>
+<base href="http://localhost/news/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Trendy Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -46,12 +47,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- Collect the nav links, forms, and other content for toggling -->
 	
 	<!-- //menu -->
-	
-	<?php
+	<div id="datasearch">
+		<?php
 
-	include("views/$view.php");
+		include("views/$view.php");
 
-	?>
+		?>
+	</div>
 
 <!-- footer -->
 	
@@ -77,4 +79,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="public/js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
 </body>
+<script>
+	$(document).ready(function(){
+		$('.btnSearch').click(function(){
+			var keyword = $('.txtSearch').val();
+			//alert(keyword)
+			$.ajax({
+				url:"http://localhost/news/search.php",
+				type:"POST",
+				data:{tukhoa:keyword},
+				success:function(data){
+					$('#datasearch').html(data)
+				},
+				error:function(){
+					console.log('thất bại')
+				}
+			})
+		})
+	})
+</script>
 </html>

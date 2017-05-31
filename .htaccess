@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule ^$ index.php
+
+RewriteRule ^dang-ki$ signup.php
+
+
+RewriteRule ^([0-9]+)-([a-zA-Z0-9_-]+)$ loaitin.php?id=$1&alias=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)-([a-zA-Z0-9_-]+)$ chitiet.php?aliasloaitin=$1&id=$2&alias=$3
+

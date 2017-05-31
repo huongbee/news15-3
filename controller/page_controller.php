@@ -82,6 +82,13 @@ class PageController extends Controller{
 	}
 
 
+	public function Search(){
+		$keyword = $_POST['tukhoa'];
+		$model = new PageModel();
+		$news = $model->search($keyword);
+		return $this->loadViewSearch($news);
+	}
+
 
 }
 

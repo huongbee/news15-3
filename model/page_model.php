@@ -65,6 +65,13 @@ class PageModel extends database{
 	}
 
 
+	public function search($keyword){
+		$sql = "SELECT * FROM tintuc WHERE TieuDe LIKE '%$keyword%' OR TomTat LIKE '%$keyword%'";
+		$this->setQuery($sql);
+		return $this->loadAllRows(array($keyword));
+	}
+
+
 
 
 
