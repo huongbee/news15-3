@@ -14,6 +14,15 @@ class AdminController extends Controller{
 		return $this->loadView('trangchu',$arrData);
 	}
 
+	public function getEditNewsById(){
+		$model = new AdminModel();
+		$loaitin = $model->getLoaitin();
+		$arrData  = array('loaitin'=>$loaitin);
+		return $this->loadView('suatintuc',$arrData);
+	}
+
+
+
 }
 
 
