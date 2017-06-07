@@ -16,6 +16,21 @@ class AdminModel extends database{
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
+
+	public function getNewsById($id){
+		$sql = "SELECT * FROM tintuc WHERE id=$id";
+		$this->setQuery($sql);
+		return $this->loadRow(array($id));
+	}
+
+
+	public function updateNews($id,$id_loai,$tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat){
+		$sql = "UPDATE tintuc SET TieuDe='$tieude', TieuDeKhongDau = '$tieudekhongdau', TomTat='$tomtat', NoiDung = '$nddaydu', Hinh='$hinh',NoiBat='$noibat', idLoaiTin=$id_loai WHERE id=$id";
+		$this->setQuery($sql);
+		return $this->execute(array($id,$id_loai,$tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat));
+		
+
+	}
 }
 
 

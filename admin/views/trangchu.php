@@ -42,7 +42,7 @@
                     <input type="checkbox" <?=$tin->NoiBat==1?"checked":""?> >
                 </td>
                 <td><?=$tin->SoLuotXem?></td>
-                <td>Sửa | Xóa</td>
+                <td><a href="editnews.php?id=<?=$tin->id?>">Sửa</a> | Xóa</td>
             </tr>
         <?php
         }

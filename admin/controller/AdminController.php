@@ -17,8 +17,27 @@ class AdminController extends Controller{
 	public function getEditNewsById(){
 		$model = new AdminModel();
 		$loaitin = $model->getLoaitin();
-		$arrData  = array('loaitin'=>$loaitin);
+
+		$id = $_GET['id'];
+		$tintuc = $model->getNewsById($id);
+
+		$arrData  = array('loaitin'=>$loaitin,'tintuc'=>$tintuc);
 		return $this->loadView('suatintuc',$arrData);
+	}
+
+
+	public function postUpdateNews($id,$id_loai,$tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat){
+
+		$model = new AdminModel();
+		$tintuc = $model->updateNews($id,$id_loai,$tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat);
+		if($tintuc){
+			header("location:editnews.php?id=$id");
+			setcookie('thanhcong','Sửa thành công',time()+3);
+		}
+		else{
+			setcookie('khongthanhcong','Sửa thất bại',time()+3);
+		}
+
 	}
 
 
