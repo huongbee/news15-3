@@ -45,6 +45,11 @@ class AdminModel extends database{
 			return false;
 		}
 	}
+	public function deleteNews($id){
+		$sql = "DELETE FROM tintuc WHERE id=$id";
+		$this->setQuery($sql);
+		return $this->execute(array($id));
+	}
 }
 
 

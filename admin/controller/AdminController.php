@@ -57,13 +57,28 @@ class AdminController extends Controller{
 		$model = new AdminModel();
 		$tintuc = $model->insertNews($tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat, $id_loai);
 		if($tintuc){
-			header("location:editnews.php?id=$id");
-			setcookie('thanhcong','Sửa thành công',time()+3);
+			header("location:themtintuc.php");
+			setcookie('thanhcong','Thêm thành công',time()+3);
 		}
 		else{
-			setcookie('khongthanhcong','Sửa thất bại',time()+3);
+			setcookie('khongthanhcong','Thêm thất bại',time()+3);
 		}
 
+	}
+
+	public function deleteNewsById(){
+		$id = $_GET['id'];
+		$model = new AdminModel();
+		$tintuc = $model->deleteNews($id);
+		
+		if($tintuc){
+			header("location:index.php");
+			setcookie('thanhcong','Xóa thành công',time()+3);
+		}
+		else{
+			header("location:index.php");
+			setcookie('khongthanhcong','Xóa thất bại',time()+3);
+		}
 	}
 
 
