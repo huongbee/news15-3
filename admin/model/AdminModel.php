@@ -31,6 +31,20 @@ class AdminModel extends database{
 		
 
 	}
+
+
+	public function insertNews($tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat, $id_loai){
+		$sql = "INSERT INTO tintuc(TieuDe, TieuDeKhongDau, TomTat, NoiDung, Hinh, NoiBat , idLoaiTin) VALUES (?,?,?,?,?,?,?)";
+		$this->setQuery($sql);
+		$result =  $this->execute(array($tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat, $id_loai));
+		
+		if($result){
+			return $this->getLastId();
+		}
+		else{
+			return false;
+		}
+	}
 }
 
 

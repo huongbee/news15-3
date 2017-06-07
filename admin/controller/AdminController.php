@@ -41,6 +41,32 @@ class AdminController extends Controller{
 	}
 
 
+	public function getAddNews(){
+		$model = new AdminModel();
+		$loaitin = $model->getLoaitin();
+
+
+		$arrData  = array('loaitin'=>$loaitin);
+		return $this->loadView('themtintuc',$arrData);
+	}
+
+
+
+	public function postAddNews($id_loai,$tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat){
+
+		$model = new AdminModel();
+		$tintuc = $model->insertNews($tieude,$tieudekhongdau,$tomtat,$nddaydu,$hinh,$noibat, $id_loai);
+		if($tintuc){
+			header("location:editnews.php?id=$id");
+			setcookie('thanhcong','Sửa thành công',time()+3);
+		}
+		else{
+			setcookie('khongthanhcong','Sửa thất bại',time()+3);
+		}
+
+	}
+
+
 
 }
 

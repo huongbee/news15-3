@@ -301,23 +301,21 @@ ob_start();
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class=" fa fa-envelope"></i>
-                          <span>Mail</span>
+                          <span>Tin tức</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="inbox.html">Inbox</a></li>
-                          <li><a  href="inbox_details.html">Inbox Details</a></li>
+                          <li><a  href="index.php">Danh sách tin tức</a></li>
+                          <li><a  href="themtintuc.php">Thêm tin tức</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>Charts</span>
+                          <i class=" fa fa-envelope"></i>
+                          <span>Loại tin</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                          <li><a  href="flot_chart.html">Flot Charts</a></li>
-                          <li><a  href="xchart.html">xChart</a></li>
+                          <li><a  href="index.php">Danh sách loại tin</a></li>
+                          <li><a  href="themtintuc.php">Thêm loại tin</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
